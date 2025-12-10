@@ -4,12 +4,15 @@ it's an embedded database that runs within your application or process, but it i
 # *Project Overview*
 This project showcases high-performance Online Analytical Processing (OLAP) using DuckDB. DuckDB is an embedded analytical database optimized for running complex SQL queries directly within an application or process, particularly on large datasets stored in formats like Parquet. The demonstration involves performing key business analysis, such as calculating customer revenue and order counts.
 # *Problem To Be Solved*
-* Enables lightning-fast analytical query performance on large datasets, leading to a significant acceleration of reporting, data analysis, and business intelligence processes.
-* This allows for near real-time insights and supports quicker, data-driven decision-making.
+* The project addresses the challenge of running complex, high-speed analytical queries directly within an application or process. 
+* It solves the issue of slow query performance often encountered when using traditional transactional (OLTP) databases for analytical workloads or the overhead associated with setting up and maintaining separate, large-scale data warehousing infrastructure.
 # *Business Impact*
-* Leverages an embedded, serverless architecture for analytics, drastically simplifying data infrastructure and reducing the operational overhead and cost associated with traditional external data warehouses.
-* This makes advanced analytical capabilities highly accessible for applications, edge devices, or localized data science workflows.
+* Enables near real-time business intelligence (BI) and reporting by providing highly efficient query execution for complex calculations (like aggregating customer revenue).
+* Allows decision-makers to quickly retrieve timely insights into customer behavior, sales performance, and revenue generation, facilitating faster, more data-driven actions.
 # *Business Leverage*
+* expensive, dedicated analytical servers or clusters, reducing infrastructure and maintenance costs.
+* Application Performance: It allows for the direct integration of high-speed analytics into applications, reports, or dashboards, drastically improving the responsiveness and user experience.
+* Scalability for Analytics: Leveraging DuckDB's column-oriented and vectorized execution engine ensures that performance remains high even as the underlying datasets grow larger.
 # *Project Flow*
 1. Create tables from parquet files
    ```sql
