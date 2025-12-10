@@ -76,3 +76,16 @@ it's an embedded database that runs within your application or process, but it i
    └──────────────────────────────────────────────────────────────────┘
    ```
 # *Assumption* 
+* duckdb installed on system, suggested on virtual environment
+  ```bash
+  python3 -m venv duck_env
+  cd duck_env
+  source bin/activate
+  (env) curl https://install.duckdb.org | sh
+  (env) duckdb --version
+   v1.3.2 (Ossivalis) 0b83e5d2f6
+  ```
+* text editor, (suggested) Vim
+  ```bash
+  sudo apt install vim --break-system-packages --user
+  ```
