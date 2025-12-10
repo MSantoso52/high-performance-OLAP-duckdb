@@ -88,4 +88,13 @@ it's an embedded database that runs within your application or process, but it i
 * text editor, (suggested) Vim
   ```bash
   sudo apt install vim --break-system-packages --user
+  ❯ vim --version
+   NVIM v0.9.5
+   Build type: Release
+   LuaJIT 2.1.1703358377
+
+   system vimrc file: "$VIM/sysinit.vim"
+     fall-back for $VIM: "/usr/share/nvim"
+
+   Run :checkhealth for more info
   ```
