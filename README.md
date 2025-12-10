@@ -55,4 +55,24 @@ it's an embedded database that runs within your application or process, but it i
      customerrevenue
       LIMIT 10;
    ```
+   ```bash
+   ❯ duckdb < customerrevenue.sql
+   ┌─────────────┬───────────────────┬────────────┬───────────────────┐
+   │ customer_id │   customername    │ ordercount │      revenue      │
+   │    int64    │      varchar      │   int64    │      double       │
+   ├─────────────┼───────────────────┼────────────┼───────────────────┤
+   │       11031 │ Alexander Palmer  │          3 │            583.19 │
+   │       11011 │ Chelsey Lopez     │          3 │ 528.6500000000001 │
+   │       11091 │ Denise Ryan       │          4 │            835.24 │
+   │       11041 │ Kenneth Palmer    │          4 │ 718.4499999999999 │
+   │       11083 │ Gabriel Lee       │          4 │            689.97 │
+   │       11071 │ Dylan Stone       │          5 │           1036.56 │
+   │       11079 │ Larry Thomas      │          5 │ 968.8600000000001 │
+   │       11040 │ Andrew Tapia      │          5 │ 943.8900000000001 │
+   │       11043 │ Teresa Moore      │          5 │ 500.8499999999999 │
+   │       11068 │ Melissa Wilson MD │          5 │            493.47 │
+   ├─────────────┴───────────────────┴────────────┴───────────────────┤
+   │ 10 rows                                                4 columns │
+   └──────────────────────────────────────────────────────────────────┘
+   ```
 # *Assumption* 
