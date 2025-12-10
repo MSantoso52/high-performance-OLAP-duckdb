@@ -2,8 +2,11 @@
 it's an embedded database that runs within your application or process, but it is specifically optimized for complex analytical queries on large datasets.
 
 # *Project Overview*
+This project showcases high-performance Online Analytical Processing (OLAP) using DuckDB. DuckDB is an embedded analytical database optimized for running complex SQL queries directly within an application or process, particularly on large datasets stored in formats like Parquet. The demonstration involves performing key business analysis, such as calculating customer revenue and order counts.
 # *Problem To Be Solved*
+Enables lightning-fast analytical query performance on large datasets, leading to a significant acceleration of reporting, data analysis, and business intelligence processes. This allows for near real-time insights and supports quicker, data-driven decision-making.
 # *Business Impact*
+Leverages an embedded, serverless architecture for analytics, drastically simplifying data infrastructure and reducing the operational overhead and cost associated with traditional external data warehouses. This makes advanced analytical capabilities highly accessible for applications, edge devices, or localized data science workflows.
 # *Business Leverage*
 # *Project Flow*
 1. Create tables from parquet files
