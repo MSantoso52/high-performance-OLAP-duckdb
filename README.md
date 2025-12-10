@@ -7,7 +7,7 @@ it's an embedded database that runs within your application or process, but it i
 # *Business Leverage*
 # *Project Flow*
 1. Create tables from parquet files
-   ```bash
+   ```sql
    -- Data Ingestions --
    -- 1. customer table view
    CREATE OR REPLACE TABLE customers AS
@@ -25,5 +25,34 @@ it's an embedded database that runs within your application or process, but it i
    FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/order_item_data.parquet');
    ```
 3. Create CTE 'customerrevenue'
-4. Dispaly dataset ready
+   ```sql
+   WITH customerrevenue AS(
+   SELECT 
+       c.customer_id,
+       c.full_name AS customername,
+       COUNT(DISTINCT o.order_id) AS ordercount,
+       SUM(oi.item_quantity * oi.item_unit_price) AS revenue
+   FROM
+       customers c
+   JOIN orders o ON c.customer_id = o.customer_id
+   JOIN order_item oi ON o.order_id = oi.order_id
+   GROUP BY 
+       c.customer_id,
+       c.full_name
+   ORDER BY
+       ordercount,
+       revenue
+       DESC)
+   ```
+5. Dispaly dataset ready
+   ```sql
+   SELECT 
+     customer_id, 
+     customername, 
+     ordercount, 
+     revenue
+   FROM 
+     customerrevenue
+      LIMIT 10;
+   ```
 # *Assumption* 
