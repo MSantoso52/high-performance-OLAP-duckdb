@@ -20,17 +20,17 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
    -- 1. customer table view
    CREATE OR REPLACE TABLE customers AS
    SELECT *
-   FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/customer_data.parquet');
+   FROM read_parquet('/home/mulyo/Learning/duckdb/data/customer_data.parquet');
 
    -- 2. order table view
    CREATE OR REPLACE TABLE orders AS
    SELECT *
-   FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/order_data.parquet');
+   FROM read_csv('/home/mulyo/Learning/duckdb/data/order_data.csv');
 
    -- 3. order_item table view
    CREATE OR REPLACE TABLE order_item AS
    SELECT *
-   FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/order_item_data.parquet');
+   FROM read_json('/home/mulyo/Learning/duckdb/parquet/order_item_data.json');
    ```
 3. Create CTE 'customerrevenue'
    ```sql
