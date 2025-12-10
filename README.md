@@ -10,7 +10,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
 * Enables near real-time business intelligence (BI) and reporting by providing highly efficient query execution for complex calculations (like aggregating customer revenue).
 * Allows decision-makers to quickly retrieve timely insights into customer behavior, sales performance, and revenue generation, facilitating faster, more data-driven actions.
 # *Business Leverage*
-* expensive, dedicated analytical servers or clusters, reducing infrastructure and maintenance costs.
+* Cost Efficiency: By using DuckDB as an embedded database, it eliminates the need for expensive, dedicated analytical servers or clusters, reducing infrastructure and maintenance costs.
 * Application Performance: It allows for the direct integration of high-speed analytics into applications, reports, or dashboards, drastically improving the responsiveness and user experience.
 * Scalability for Analytics: Leveraging DuckDB's column-oriented and vectorized execution engine ensures that performance remains high even as the underlying datasets grow larger.
 # *Project Flow*
