@@ -30,7 +30,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
    -- 3. order_item table view
    CREATE OR REPLACE TABLE order_item AS
    SELECT *
-   FROM read_json('/home/mulyo/Learning/duckdb/parquet/order_item_data.json');
+   FROM read_json('/home/mulyo/Learning/duckdb/data/order_item_data.json');
    ```
 3. Create CTE 'customerrevenue'
    ```sql
