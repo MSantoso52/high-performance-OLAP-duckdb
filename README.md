@@ -1,6 +1,6 @@
 # high-performance-OLAP-duckdb
 it's an embedded database that runs within your application or process, but it is specifically optimized for complex analytical queries on large datasets.
-
+![Project Flow](project_flow.png)
 # *Project Overview*
 This project showcases high-performance Online Analytical Processing (OLAP) using DuckDB. DuckDB is an embedded analytical database optimized for running complex SQL queries directly within an application or process, particularly on large datasets stored in formats like Parquet. The demonstration involves performing key business analysis, such as calculating customer revenue and order counts.
 # *Problem To Be Solved*
@@ -20,17 +20,17 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
    -- 1. customer table view
    CREATE OR REPLACE TABLE customers AS
    SELECT *
-   FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/customer_data.parquet');
+   FROM read_parquet('/home/mulyo/Learning/duckdb/data/customer_data.parquet');
 
    -- 2. order table view
    CREATE OR REPLACE TABLE orders AS
    SELECT *
-   FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/order_data.parquet');
+   FROM read_csv('/home/mulyo/Learning/duckdb/data/order_data.csv');
 
    -- 3. order_item table view
    CREATE OR REPLACE TABLE order_item AS
    SELECT *
-   FROM read_parquet('/home/mulyo/Learning/duckdb/parquet/order_item_data.parquet');
+   FROM read_json('/home/mulyo/Learning/duckdb/data/order_item_data.json');
    ```
 3. Create CTE 'customerrevenue'
    ```sql
@@ -84,7 +84,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
    └──────────────────────────────────────────────────────────────────┘
    ```
 # *Assumption* 
-* duckdb installed on system, suggested on virtual environment
+* duckdb installed on system, (suggested) on virtual environment
   ```bash
   python3 -m venv duck_env
   cd duck_env
@@ -93,7 +93,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
   (env) duckdb --version
    v1.3.2 (Ossivalis) 0b83e5d2f6
   ```
-* text editor, (suggested) Vim
+* text editor ready, (suggested) Vim
   ```bash
   sudo apt install vim --break-system-packages --user
   ❯ vim --version
