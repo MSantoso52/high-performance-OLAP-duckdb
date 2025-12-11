@@ -14,7 +14,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
 * Application Performance: It allows for the direct integration of high-speed analytics into applications, reports, or dashboards, drastically improving the responsiveness and user experience.
 * Scalability for Analytics: Leveraging DuckDB's column-oriented and vectorized execution engine ensures that performance remains high even as the underlying datasets grow larger.
 # *Project Flow*
-1. Create tables from parquet files
+1. Create tables from parquet, CSV & JSON files
    ```sql
    -- Data Ingestions --
    -- 1. customer table view
