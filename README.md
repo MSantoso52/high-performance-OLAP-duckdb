@@ -84,7 +84,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
    └──────────────────────────────────────────────────────────────────┘
    ```
 # *Assumption* 
-* duckdb installed on system, suggested on virtual environment
+* duckdb installed on system, (suggested) on virtual environment
   ```bash
   python3 -m venv duck_env
   cd duck_env
@@ -93,7 +93,7 @@ This project showcases high-performance Online Analytical Processing (OLAP) usin
   (env) duckdb --version
    v1.3.2 (Ossivalis) 0b83e5d2f6
   ```
-* text editor, (suggested) Vim
+* text editor ready, (suggested) Vim
   ```bash
   sudo apt install vim --break-system-packages --user
   ❯ vim --version
