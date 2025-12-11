@@ -42,3 +42,30 @@ SELECT
 FROM 
   customerrevenue
 LIMIT 10;
+
+-- Export insight to parquet file
+COPY (
+  WITH customerrevenue AS(
+    SELECT 
+      c.customer_id,
+      c.full_name AS customername,
+      COUNT(DISTINCT o.order_id) AS ordercount,
+      SUM(oi.item_quantity * oi.item_unit_price) AS revenue
+    FROM
+      customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    JOIN order_item oi ON o.order_id = oi.order_id
+    GROUP BY 
+      c.customer_id,
+      c.full_name
+    ORDER BY
+      ordercount,
+      revenue
+      DESC
+  )
+  SELECT 
+    * 
+  FROM 
+    customerrevenue
+)
+TO 'customerrevenue.parquet' (FORMAT PARQUET);
